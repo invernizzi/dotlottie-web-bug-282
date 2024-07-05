@@ -1,6 +1,7 @@
 
+Please ignore this repo - it's a bug reproduction for https://github.com/LottieFiles/dotlottie-web/issues/282
 
-# Create a website that works as expected in dev mode
+## Create a website that works as expected in dev mode
 
 Create nuxt project.
 ```
@@ -26,7 +27,7 @@ Two animations will work correctly.
 The first one is loaded via `src`, while the other bypasses the bug by loading data through `data`.
 ![dev images](images/dev.png)
 
-# Reproduce the bug
+## Reproduce the bug
 
 Build the website for production.
 ```

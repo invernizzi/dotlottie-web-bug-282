@@ -14,6 +14,9 @@ import animationDataUrl from '@/public/animation.lottie?url';
 const canvasBroken = ref()
 const canvasWorking = ref()
 
+/**
+ * We load the animation using `src`. This works in dev but it's broken in prod.
+ */
 const brokenAnimation = () => {
   new DotLottie({
     canvas: canvasBroken.value,
@@ -23,10 +26,12 @@ const brokenAnimation = () => {
   })
 } 
 
-
+/**
+ * We load the animation using `data`, sidestepping the code that triggers the bug. 
+ * This works everywhere.
+ */
 const workingAnimation = async () => {
   const response = await fetch(animationDataUrl)
-   
   new DotLottie({
     canvas: canvasWorking.value,
     data:  await response.arrayBuffer(),

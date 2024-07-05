@@ -25,6 +25,7 @@ Create `app.vue` to match [its current contents](project/app.vue).
 Finally, run `npm run dev` and open the website. 
 Two animations will work correctly.
 The first one is loaded via `src`, while the other bypasses the bug by loading data through `data`.
+
 ![dev images](images/dev.png)
 
 ## Reproduce the bug
